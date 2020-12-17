@@ -13,5 +13,9 @@ print("Zum Beenden geben Sie bye ein....")
 print("")
 
 nutzereingabe = ""  # sauberer Stil: Variablentyp initialisieren
-nutzereingabe = input("Ihre Frage oder Antwort: ")
-print(nutzereingabe)
+while nutzereingabe != "bye":
+    nutzereingabe = ""  # Variable säubern: nichts bleibt übrig
+    nutzereingabe = input("Ihre Frage oder Antwort: ")
+    print(nutzereingabe)
+print("Einen schönen Tag.")
+
