@@ -7,6 +7,13 @@
 # Ein einfacher ChatBot
 # (c) 2020 by me, Lizenz GPLv3
 
+import random
+
+zufallsantworten = ["Oh wirklich...", "Interessant",
+                    "Das kann man so sehen.", "Ich verstehe..."]
+# ELIZA: eigtl. in externer Datei speichern und dann in main
+# einem initialisierten Array zuweisen
+
 print("Willkommen beim ChatBot (v1)")
 print("Worüber wollen Sie sprechen?")
 print("Zum Beenden geben Sie bye ein....")
@@ -16,6 +23,5 @@ nutzereingabe = ""  # sauberer Stil: Variablentyp initialisieren
 while nutzereingabe != "bye":
     nutzereingabe = ""  # Variable säubern: nichts bleibt übrig
     nutzereingabe = input("Ihre Frage oder Antwort: ")
-    print(nutzereingabe)
+    print(random.choice(zufallsantworten))  # Nachteil an Laufvariable (zufallsantworten[i] (mit i = random.randint(1,4) )): ist auf Länge der zufallsanworten angewiesen
 print("Einen schönen Tag.")
-
